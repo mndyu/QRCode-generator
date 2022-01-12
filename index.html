@@ -44,6 +44,7 @@
         },
         computed: {
           newQRCode() {
+            window.location.hash = this.text;
             this.qrcode.value = this.text;
             return this.qrcode.toDataURL();
           },
