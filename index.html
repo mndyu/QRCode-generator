@@ -39,7 +39,7 @@
         el: "#app",
         data: {
           title: "Gerador QRCode",
-          text: "" || window.location.hash.substr(1),
+          text: window.location.hash ? decodeURI(window.location.hash.substr(1)) : "",
           qrcode: new QRious({ size: 300 }),
         },
         computed: {
